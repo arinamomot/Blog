@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: italic;
+}
+
+header {
+    font-size: 20px;
+    background: #f08080;
+    overflow: hidden;
+}
+
+.dark-theme {
+    background: #333!important;
+    color: white !important;
+}
+
+header  a {
+    cursor: pointer;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header  i {
+    float: left;
+    cursor: pointer;
+    display: none !important;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
+.out {
+    float: right;
+}
+
+
+.active {
+    background: #DC143C;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 10px;
+}
+
+.box {
+    background-color: antiquewhite;
+    border: 1px solid #DC143C;
+    width: 48%;
+}
+
+.box > h2 {
+    color: #DC143C;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.field{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.field > input{
+    flex-grow: 4;
+    height: 25px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 10px;
+}
+
+.buttons > button{
+    width: 30%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    /*width: 100px;*/
+    /*background-color: white;*/
+    background-color: #DC143C;
+    color: white;
+    border: 1px solid #DC143C;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.field > label{
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.field > #form_email {
+    flex-grow: 10;
+}
+
+.field > #form_email2 {
+    flex-grow: 4;
+}
+
+hr {
+    border: 1px solid #DC143C;
+    margin-bottom: 25px;
+}
+
+#eye {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
+div.box p{
+    text-align: center;
+}
+
+i {
+    float: right;
+}
+
+.theme {
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    background: antiquewhite;
+    font-size: 35px;
+    border-radius: 0 40% 40% 0;
+    padding: 5px 10px;
+    border: 2px solid #DC143C;
+    margin: 5px auto;
+}
+
+@media only screen and (max-width: 600px) {
+    main > .box {width: 100%;
+    margin: 5px;}
+    header  a {
+        width: 100%;
+        padding: 5px;
+    }
+    .active {
+        width: calc(100% - 30px)
+    }
+    header  i#menu {
+        font-size: 30px;
+        width: 30px;
+        cursor: pointer;
+        display: block !important;
+    }
+    .mobile {
+        display: none;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .mobile {
+        display: block !important;
+    }
+}
+
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-color: black !important;
+    }
+}

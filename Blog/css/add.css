@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: italic;
+}
+header {
+    font-size: 20px;
+    background: #f08080;
+    overflow: hidden;
+}
+
+.dark-theme {
+    background: #333 !important;
+    color: white !important;
+}
+
+header  a {
+    cursor: pointer;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header  i {
+    float: left;
+    cursor: pointer;
+    display: none !important;
+}
+
+header a:hover {
+    background-color: white;
+    color: black;
+}
+
+.out {
+    float: right;
+}
+
+
+.active {
+    background: #DC143C;
+}
+
+.box {
+    background-color: antiquewhite;
+    border: 1px solid #DC143C;
+    margin: 30px auto;
+    overflow: auto;
+    width: 80%;
+}
+
+p {
+    font-size: 22px;
+    margin: 5px;
+    text-align: center;
+}
+
+.box > form > textarea {
+    resize: none;
+    font-size: 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    width: 90%;
+}
+
+button.save {
+    width: 100px;
+    background-color: #DC143C;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    margin: 10px 10px 10px calc(80% - 50px);
+}
+
+.theme {
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    background: antiquewhite;
+    font-size: 35px;
+    border-radius: 0 40% 40% 0;
+    padding: 5px 10px;
+    border: 2px solid #DC143C;
+    margin: 5px auto;
+}
+
+.result {
+    padding: 10px;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-box > .box {width: 100%;}
+    header  a {
+        width: 100%;
+        padding: 5px;
+    }
+    .active {
+        width: calc(100% - 30px)
+    }
+    header  i#menu {
+        font-size: 30px;
+        width: 30px;
+        cursor: pointer;
+        display: block !important;
+    }
+    .mobile {
+        display: none;
+    }
+    .myphoto {
+        width: 50%;
+        height: 80%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .mobile {
+        display: block !important;
+    }
+}
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-color: black !important;
+    }
+}

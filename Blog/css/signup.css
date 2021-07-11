@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: italic;
+}
+
+header {
+  font-size: 20px;
+  background: #f08080;
+  overflow: hidden;
+}
+
+.dark-theme {
+    background: #333!important;
+    color: white !important;
+}
+
+header  a {
+  cursor: pointer;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+header  i {
+  float: left;
+  cursor: pointer;
+  display: none !important;
+}
+
+header a:hover {
+  background-color: white;
+  color: black;
+}
+
+.out {
+  float: right;
+}
+
+
+.active {
+  background: #DC143C;
+}
+
+
+.box {
+    background-color: antiquewhite;
+    border: 1px solid #DC143C;
+    margin: 30px 10% 20px 10%;
+}
+
+.box > h2 {
+    color: #DC143C;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.field{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.field > input{
+    flex-grow: 4;
+    height: 25px;
+}
+
+.field > button{
+    width: 100px;
+    /*background-color: white;*/
+    background-color: #DC143C;
+    color: white;
+    border: 1px solid #DC143C;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.field > label{
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.field > #form_email {
+  flex-grow: 10;
+}
+
+.field > #form_email2 {
+  flex-grow: 4;
+}
+
+hr {
+    border: 1px solid #DC143C;
+    margin-bottom: 25px;
+}
+
+.please {
+  margin: 10px;
+}
+
+.login {
+    background-color: antiquewhite;
+    border: 1px solid #DC143C;
+    margin: 80px 10% 20px 10%;
+}
+
+.login > h2 {
+    color: #DC143C;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#eye {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+    color: black !important;
+}
+
+div.login p, div.box p{
+  text-align: center;
+}
+
+i {
+  float: right;
+}
+
+.terms {
+    text-decoration: none;
+}
+
+#form_birthday {
+    background-color: white;
+    border: 0.2px solid darkgrey;
+}
+
+.theme {
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    background: antiquewhite;
+    font-size: 35px;
+    border-radius: 0 40% 40% 0;
+    padding: 5px 10px;
+    border: 2px solid #DC143C;
+    margin: 5px auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-box > .box {width: 100%;}
+  header  a {
+    width: 100%;
+    padding: 5px;
+  }
+  .active {
+    width: calc(100% - 30px)
+  }
+  header  i#menu {
+    font-size: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: block !important;
+  }
+  .mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .mobile {
+    display: block !important;
+  }
+}
+
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-color: black !important;
+    }
+}

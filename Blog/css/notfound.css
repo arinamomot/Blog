@@ -1,0 +1,73 @@
+body {
+    display: inline-block;
+    background: url("../images/space.png") center/cover no-repeat;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    margin: 20% 0 5% 42%;
+    font: 7em Roboto;
+}
+p {
+    /*display: inline-block;*/
+    margin: 5% 0 5% 43%;
+    font: 2em Roboto;
+}
+button {
+    border-radius: 15%;
+    font: 2em Roboto;
+    margin: 5% 0 5% 43%;
+    background-color: #DC143C;
+    color: white;
+    border: 1px solid #DC143C;
+    padding: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.object_astronaut{
+    animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut{
+    z-index: 110 !important;
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    will-change: transform;
+    animation: move-astronaut 50s infinite linear both alternate;
+}
+
+@-moz-keyframes move-astronaut {
+    100% { -moz-transform: translate(-160px, -160px);}
+}
+@-webkit-keyframes move-astronaut {
+    100% { -webkit-transform: translate(-160px, -160px);}
+}
+@keyframes move-astronaut{
+    100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+}
+@-moz-keyframes rotate-astronaut {
+    100% { -moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes rotate-astronaut {
+    100% { -webkit-transform: rotate(-720deg);}
+}
+@keyframes rotate-astronaut{
+    100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
+}
+
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-color: black !important;
+    }
+}

@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: italic;
+}
+
+header {
+    font-size: 20px;
+    background: #f08080;
+    overflow: hidden;
+}
+
+.dark-theme {
+    background: #333 !important;
+    color: white !important;
+}
+
+header a {
+    cursor: pointer;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header i {
+    float: left;
+    cursor: pointer;
+    display: none !important;
+}
+
+header a:hover {
+    background-color: white;
+    color: black;
+}
+
+.out {
+    float: right;
+}
+
+
+.active {
+    background: #DC143C;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.gmailblock {
+    width: 100%;
+    padding: 20px;
+    background: antiquewhite;
+    text-align: center;
+    border: 1px solid #DC143C;
+}
+
+.gmailblock p{
+    font-size: 25px;
+}
+
+.gmailblock a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #DC143C;
+}
+
+.theme {
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    background: antiquewhite;
+    font-size: 35px;
+    border-radius: 0 40% 40% 0;
+    padding: 5px 10px;
+    border: 2px solid #DC143C;
+    margin: 5px auto;
+}
+
+.comment_area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+article * {
+    font-size: 22px;
+}
+
+#question {
+    background: antiquewhite;
+    width: 48%;
+    padding: 80px;
+    margin: 10px;
+    border: 1px solid #DC143C;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .comment_area {
+        width: 100%;
+    }
+
+    #question {
+        width: 100%;
+        padding: 20px;
+        margin: 10px 10px 10px 0;
+    }
+
+    header a {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .active {
+        width: calc(100% - 30px)
+    }
+
+    header i#menu {
+        font-size: 30px;
+        width: 30px;
+        cursor: pointer;
+        display: block !important;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+    .mobile {
+        display: block !important;
+    }
+}
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-color: black !important;
+    }
+}

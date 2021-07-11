@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-style: italic;
+}
+
+header {
+    font-size: 20px;
+    background: #f08080;
+    overflow: hidden;
+}
+
+.dark-theme {
+    background: #333 !important;
+    color: white !important;
+}
+
+
+header a {
+    cursor: pointer;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header i {
+    float: left;
+    cursor: pointer;
+    display: none !important;
+}
+
+header a:hover {
+    background-color: white;
+    color: black;
+}
+
+.out {
+    float: right;
+}
+
+
+.active {
+    background: #DC143C;
+}
+
+main {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+    background-color: antiquewhite;
+    color: black;
+    border: 2px solid #DC143C;
+}
+
+h3 {
+    padding: 10px;
+    color: #DC143C;
+    font-size: 25px;
+}
+
+h4 {
+    text-decoration: underline;
+    color: #DC143C;
+
+}
+
+.myphoto {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+    border-radius: 10%;
+    border: 1px solid #DC143C;
+    box-shadow: 0 0 10px rgba(200, 0, 0, 0.6);
+}
+
+ul.spisok {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.social {
+    margin: 20px;
+}
+
+.area {
+    margin: 20px;
+}
+
+
+.icon {
+    width: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.link-media {
+    text-decoration: none;
+}
+
+.icon:hover {
+    filter: brightness(0.3);
+}
+
+i {
+    float: right;
+}
+
+.theme {
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    background: antiquewhite;
+    font-size: 35px;
+    border-radius: 0 40% 40% 0;
+    padding: 5px 10px;
+    border: 2px solid #DC143C;
+    margin: 5px auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main-box > .box {
+        width: 100%;
+    }
+
+    header a {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .active {
+        width: calc(100% - 30px)
+    }
+
+    header i#menu {
+        font-size: 30px;
+        width: 30px;
+        cursor: pointer;
+        display: block !important;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .mobile {
+        display: block !important;
+    }
+}
+
+@media print {
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        border-color: black !important;
+        filter: grayscale(100%) !important;
+    }
+}
